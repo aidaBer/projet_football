@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 14 Mars 2018 à 22:26
+-- Généré le :  Jeu 15 Mars 2018 à 03:18
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -97,23 +97,18 @@ CREATE TABLE `equipe` (
 --
 
 INSERT INTO `equipe` (`id_equipe`, `nom_equipe`, `id_entraineur`) VALUES
-(1, 'Real', 1),
-(2, 'Milan Ac', 2),
-(3, 'Atletico de Madrid', 3),
-(4, 'Barcelone Fc', 4),
-(5, 'Man city', 5),
-(6, 'Manchester United', 6),
-(7, 'Bayern', 7),
-(8, 'Juventus', 8),
-(9,'Tottenham', 9),
-(10,'Chelsea',10),
-(11, 'Liverpool', 11),
-(12,'Marseille',12),
-(13, 'Arsenal', 13),
-(14, 'PSG', 14),
-(15, 'Lyon', 15),
-(16,'Bordeaux',16)
-
+(67, 'Real', 1),
+(68, 'Milan Ac', 2),
+(69, 'Atletico de Madrid', 3),
+(70, 'Barcelone Fc', 4),
+(71, 'Man city', 5),
+(72, 'Manchester United', 6),
+(73, 'Bayern', 7),
+(74, 'Juventus', 8),
+(75, 'Liverpool', 11),
+(76, 'PSG', 13),
+(77, 'TOTTHENAM', 9),
+(78, 'CHELSEA', 10);
 
 -- --------------------------------------------------------
 
@@ -141,12 +136,16 @@ CREATE TABLE `joueur` (
   `nom_joueur` varchar(30) NOT NULL,
   `prenom_joueur` varchar(30) NOT NULL,
   `nationalite_joueur` varchar(30) NOT NULL,
-  `ddn_joueur` date NOT NULL,
+  `ddn_joueur` date DEFAULT NULL,
   `id_equipe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
 --
+-- Contenu de la table `joueur`
+--
+
+INSERT INTO `joueur` (`id_joueur`, `nom_joueur`, `prenom_joueur`, `nationalite_joueur`, `ddn_joueur`, `id_equipe`) VALUES
+(2, 'SALL', 'COLONEL', 'RIEN', NULL, 67);
 
 -- --------------------------------------------------------
 
@@ -315,7 +314,7 @@ ALTER TABLE `evenement`
 -- AUTO_INCREMENT pour la table `joueur`
 --
 ALTER TABLE `joueur`
-  MODIFY `id_joueur` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_joueur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `phase`
 --

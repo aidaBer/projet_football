@@ -1,4 +1,4 @@
-<?php
+<?
 	include '../Model/model.php';
 
 	if(isset($_REQUEST["joueur"])){

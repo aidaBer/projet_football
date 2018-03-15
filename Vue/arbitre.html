@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<form method="POST" action="http://localhost:8888/Controlleur/controlleur_arbitre.php">
+        <label for="nom1"> Nom </label>
+		<input type="text" name="nom1"> <br>
+		<label for="prenom1"> Prenom</label>
+		<input type="text" name="prenom1"> <br>
+		<input type="text" name="ddn"> Date de naissance <br>
+		<label for="poste1"> Poste arbitre
+			  
+		</label>
+		<select name=poste1>
+			       <option value="Arbitre touche"> Arbitre Touche </option>
+			       <option value="Arbitre central"> Arbitre central </option>
+			       <option value="Arbitre assistant"> Arbitre assistant </option>
+			       <option value="Arbitre remplacant"> Arbitre remplacant </option>
+		 </select> <br>
+		<button type="submit" name="joueur">Valider </button>
+		
+	</form>
+
+</body>
+</html>

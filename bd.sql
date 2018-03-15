@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 14 Mars 2018 à 22:26
+-- Généré le :  Jeu 15 Mars 2018 à 03:18
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -136,9 +136,16 @@ CREATE TABLE `joueur` (
   `nom_joueur` varchar(30) NOT NULL,
   `prenom_joueur` varchar(30) NOT NULL,
   `nationalite_joueur` varchar(30) NOT NULL,
-  `ddn_joueur` date NOT NULL,
+  `ddn_joueur` date DEFAULT NULL,
   `id_equipe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `joueur`
+--
+
+INSERT INTO `joueur` (`id_joueur`, `nom_joueur`, `prenom_joueur`, `nationalite_joueur`, `ddn_joueur`, `id_equipe`) VALUES
+(2, 'SALL', 'COLONEL', 'RIEN', NULL, 67);
 
 -- --------------------------------------------------------
 
@@ -307,7 +314,7 @@ ALTER TABLE `evenement`
 -- AUTO_INCREMENT pour la table `joueur`
 --
 ALTER TABLE `joueur`
-  MODIFY `id_joueur` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_joueur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `phase`
 --
