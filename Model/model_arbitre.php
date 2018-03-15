@@ -6,7 +6,7 @@
 }
 
 function ajouterArbitre($nom_arbitre,$prenom_arbitre,$ddn_arbitre,$poste_arbitre){
-		$bdd1 = connection();
+		$bdd1 = connection_arbitre();
 
 	    $result1=$bdd1->prepare("INSERT INTO `arbitre` (`nom_arbitre`, `prenom_arbitre`, `ddn_arbitre`, `id_equipe`) VALUES (:nom1, :prenom1, :ddn1,:poste1)");
 	    $result->execute(array(
